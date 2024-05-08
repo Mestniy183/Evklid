@@ -526,10 +526,9 @@ console.log(arr);*/
 //   { name: "Bob", age: 20 },
 //   { name: "Carol", age: 25 },
 //   { name: "Dave", age: 28 },
-// ] 
+// ]
 //  let htu = piople.filter(elem => elem.age > 25)
 // console.log(htu);
-
 
 // let numbers = [5,12,3,15,7,20]
 // let dg = numbers.find(elem => elem > 10)
@@ -553,7 +552,6 @@ fruits.forEach((elem.map) => {
 
 //let lettersArray = ['h','e','l','l','o',]
 //console.log(lettersArray.join(''));
-
 
 //  console.log(navigator.userAgent);
 //  if(navigator.userAgent.includes('YaBrowser')){
@@ -604,17 +602,15 @@ items.forEach(element => {
 });
 document.body.append(ul)*/
 
-const navList = document.querySelector('.nav-list')
-const btnBurger = document.querySelector('.nav-burger')
+const navList = document.querySelector('.nav-list');
+const btnBurger = document.querySelector('.nav-burger');
 btnBurger.addEventListener('click', function () {
-    btnBurger.classList.toggle('active')
-    navList.classList.toggle('active')
-})
-var swiper = new Swiper(".swiper", {
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+  btnBurger.classList.toggle('active');
+  navList.classList.toggle('active');
 });
-
-
+var swiper = new Swiper('.swiper', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
