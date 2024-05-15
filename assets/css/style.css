@@ -256,8 +256,10 @@ about */
   flex: 1 1 50%;
 }
 .about__left {
+  width: 100%;
 }
 .about__left-img {
+  position: relative;
 }
 .about__inner {
   border-radius: 32px;
@@ -266,6 +268,9 @@ about */
   align-items: center;
   justify-content: space-between;
   padding: 50px;
+  position: absolute;
+  width: 45.3%;
+  margin-top: -10.5%;
 }
 .about__left-text {
   color: rgb(255, 255, 255);
@@ -310,4 +315,7 @@ about */
 }
 .setting-bg {
   background-image: url('../img/about/about-right-bottom.svg');
+}
+
+.about__left-btn:hover {
 }
