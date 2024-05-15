@@ -1,0 +1,8 @@
+@media (hover: hover) {
+  .about__left-btn:hover {
+    background-color: var(--orange-color);
+  }
+  .site-btn:hover {
+    background-color: var(--orange-color);
+  }
+}

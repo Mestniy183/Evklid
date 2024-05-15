@@ -8,6 +8,27 @@ html {
   box-sizing: inherit;
 }
 
+:root {
+  --orange-color: #ff9900;
+  --white-color: #fff;
+  --black-color: #000;
+  --light-orange-color: #ffb84d;
+  --dark-orange-color: #e1670e;
+  --grey-color: #cacaca;
+  --medium-grey-color: #666666;
+  --dark-grey-color: #414141;
+}
+
+.site-btn {
+  border: none;
+  background-color: var(--orange-color);
+  border-radius: 16px;
+  color: var(--white-color);
+  font-weight: 700;
+  transition: backgraund-color 0.3s ease;
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
 }
@@ -96,7 +117,7 @@ p {
 .burger::before {
   height: 3px;
   width: 30px;
-  background-color: black;
+  background-color: var(--black-color);
   display: block;
   transition: all 0.4s ease;
 }
@@ -143,7 +164,7 @@ p {
     flex-direction: column;
     height: 100vh;
     width: 420px;
-    background-color: #fff;
+    background-color: var(--white-color);
     box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.1);
     padding: 200px 0 0 50px;
     border-radius: 0 0 32px 32px;
@@ -205,7 +226,7 @@ p {
   font-weight: 800;
   font-size: 70px;
   line-height: 85px;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .hero-text {
@@ -214,23 +235,14 @@ p {
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .hero-btn {
-  background: orange;
-  border: none;
-  color: #fff;
-  cursor: pointer;
   padding: 25px 39px;
   font-size: 23px;
-  border-radius: 16px;
-  transition: background 0.5s ease;
 }
 
-.hero-btn:hover {
-  background: rgb(179, 123, 21);
-}
 /* 
 about */
 .about {
@@ -273,18 +285,29 @@ about */
   margin-top: -10.5%;
 }
 .about__left-text {
-  color: rgb(255, 255, 255);
+  color: var(--white-color);
   font-size: 16px;
   font-weight: 700;
   line-height: 32px;
   max-width: 433px;
 }
 .about__left-btn {
-  border: 3px solid rgb(255, 153, 0);
+  border: 3px solid var(--orange-color);
   border-radius: 16px;
   font-weight: 700;
   color: white;
   padding: 19px 38px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.about__left-btn:focus-visible {
+  outline: none;
+  background-color: var(--orange-color);
+}
+
+.about__left-btn:active {
+  background-color: var(--dark-orange-color);
+  border-color: var(--dark-orange-color);
 }
 .about__right {
   display: flex;
@@ -292,7 +315,7 @@ about */
   flex-direction: column;
 }
 .about__right-item {
-  border: 1px solid rgb(202, 202, 202);
+  border: 1px solid var(--grey-color);
   border-radius: 32px;
   padding: 65px 0 65px 300px;
   background-repeat: no-repeat;
@@ -315,7 +338,4 @@ about */
 }
 .setting-bg {
   background-image: url('../img/about/about-right-bottom.svg');
-}
-
-.about__left-btn:hover {
 }
