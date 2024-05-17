@@ -1,8 +1,26 @@
+:root {
+  --orange-color: #ff9900;
+  --white-color: #fff;
+  --black-color: #000;
+  --light-orange-color: #ffb84d;
+  --dark-orange-color: #e1670e;
+  --grey-color: #cacaca;
+  --medium-grey-color: #666666;
+  --dark-grey-color: #414141;
+}
 @media (hover: hover) {
   .about__left-btn:hover {
     background-color: var(--orange-color);
   }
   .site-btn:hover {
     background-color: var(--orange-color);
+  }
+  .work__btn:hover {
+    color: var(--orange-color);
+  }
+  .work__left-btn--border:hover {
+    color: var(--white-color);
+    background-color: var(--medium-grey-color);
+    border-color: var(--medium-grey-color);
   }
 }
