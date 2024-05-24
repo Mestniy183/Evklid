@@ -521,3 +521,50 @@ about */
   background-color: var(--grey-color);
   transform: translateY(-50%) rotate(45deg);
 }
+
+.footer {
+  max-width: 1920px;
+  min-height: 594px;
+  background-color: var(--black-color);
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer__left {
+  flex-basis: 21%;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.footer-nav__list {
+  margin-bottom: 90px;
+}
+
+.footer-nav__link {
+  color: var(--grey-color);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.footer__icon {
+}
+
+.footer__text {
+  max-width: 363px;
+  line-height: 32px;
+  color: var(--grey-color);
+  align-self: center;
+}
