@@ -630,8 +630,12 @@ about */
 }
 
 .footer-form__btn {
+  display: flex;
+  justify-content: center;
 }
 .footer-form__submit {
+  width: 269px;
+  height: 58px;
 }
 .site-btn {
 }
