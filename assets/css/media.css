@@ -24,3 +24,165 @@
     border-color: var(--medium-grey-color);
   }
 }
+
+@media (max-width: 1600px) {
+  .about__right-item {
+    padding: 35px 35px 35px 225px;
+    background-position: 36px 65px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+  .header-logo {
+    width: 150px;
+  }
+  .nav-list {
+    gap: 60px;
+  }
+  .work__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .about__content {
+    flex-direction: column;
+  }
+  .about__left {
+    padding-top: 444px;
+  }
+
+  .footer__text {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 50px;
+  }
+
+  .nav {
+    order: 0;
+  }
+
+  .header-logo {
+    order: 1;
+  }
+  .header__search {
+    order: 2;
+  }
+  .nav-burger {
+    display: flex;
+    position: relative;
+    z-index: 10;
+  }
+
+  .nav-list {
+    position: absolute;
+    flex-direction: column;
+    height: 100vh;
+    width: 420px;
+    background-color: var(--white-color);
+    box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.1);
+    padding: 200px 0 0 50px;
+    border-radius: 0 0 32px 32px;
+    gap: 60px;
+    overflow-y: auto;
+    z-index: 10;
+    top: 0;
+    left: -50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .nav-list.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hero {
+    height: 668px;
+    margin: 40px 0 35px;
+  }
+
+  .hero-title {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 73px;
+    margin-bottom: 16px;
+    max-width: 770px;
+  }
+
+  .hero-content {
+    padding: 160px 77px;
+  }
+
+  .hero-text {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 660px;
+    margin-bottom: 60px;
+  }
+
+  .about__text {
+    margin-bottom: 60px;
+  }
+
+  .about__right-item {
+    padding: 65px 0 65px 317px;
+    background-position: 77px 65px;
+  }
+
+  .about {
+    padding-bottom: 76px;
+  }
+
+  .work__list {
+    margin-bottom: 50px;
+  }
+
+  .work__left-text {
+    max-width: 437px;
+    margin-bottom: 25px;
+  }
+
+  .work {
+    padding-bottom: 80px;
+  }
+
+  .questions {
+    padding-bottom: 80px;
+  }
+
+  .question:nth-child(even) .heading {
+    padding: 30px 0;
+  }
+
+  .heading__text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .footer__left {
+    flex-basis: 44%;
+  }
+
+  .footer-nav__link {
+    line-height: 36px;
+  }
+
+  .footer-form__area {
+    padding: 22px 0 0 24px;
+  }
+
+  .footer-form__submit {
+    padding: 19px 38px;
+  }
+}
