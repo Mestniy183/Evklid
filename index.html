@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/media.css" />
 
+    <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="assets/js/app.js" defer></script>
   </head>
@@ -35,6 +36,9 @@
             </button>
           </nav>
           <div class="search">
+            <div class="search__input">
+              <input type="text" placeholder="Что будем искать?" id="input" />
+            </div>
             <button class="header__search btn-reset">
               <svg
                 width="24.000000"
@@ -73,6 +77,33 @@
                   stroke-opacity="1.000000"
                   stroke-width="2.000000"
                 />
+              </svg>
+            </button>
+            <button class="header__close btn-reset">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="8.95386"
+                  y="7.30444"
+                  width="11.6645"
+                  height="2.33291"
+                  transform="rotate(45 8.95386 7.30444)"
+                  fill="#CACACA"
+                />
+                <rect
+                  x="7.3042"
+                  y="15.5525"
+                  width="11.6645"
+                  height="2.33291"
+                  transform="rotate(-45 7.3042 15.5525)"
+                  fill="#CACACA"
+                />
+                <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2" />
               </svg>
             </button>
           </div>
@@ -125,7 +156,15 @@
         </p>
         <div class="about__content">
           <div class="about__left">
-            <img src="assets/img/about/about-builder.jpeg" class="about__left-img" alt="builder" />
+            <picture>
+              <source media="(max-width:576px )" srcset="assets/img/about/about-320.png" />
+              <source media="(max-width:1440px )" srcset="assets/img/about/about-1024.png" />
+              <img
+                src="assets/img/about/about-builder.jpeg"
+                class="about__left-img"
+                alt="builder"
+              />
+            </picture>
             <div class="about__inner">
               <p class="about__left-text">
                 Принимая во внимание показатели успешности, перспективное планирование способствует
@@ -156,19 +195,19 @@
         <h2 class="work__title site-title">Как мы работаем</h2>
         <ul class="work__list list-reset">
           <li class="work__item">
-            <button class="work__btn btn-reset">1 шаг</button>
+            <button class="work__btn btn-reset" data-tab="#tab_1">1 шаг</button>
           </li>
           <li class="work__item">
-            <button class="work__btn btn-reset">2 шаг</button>
+            <button class="work__btn btn-reset" data-tab="#tab_2">2 шаг</button>
           </li>
           <li class="work__item">
-            <button class="work__btn btn-reset">3 шаг</button>
+            <button class="work__btn btn-reset" data-tab="#tab_3">3 шаг</button>
           </li>
           <li class="work__item">
-            <button class="work__btn btn-reset">4 шаг</button>
+            <button class="work__btn btn-reset" data-tab="#tab_4">4 шаг</button>
           </li>
         </ul>
-        <div class="work__content">
+        <div class="work__content tab__content" id="tab_1">
           <div class="work__left">
             <div class="work__inner">
               <h3 class="work__left-title">Проводим консультацию</h3>
@@ -205,29 +244,171 @@
             </picture>
           </div>
         </div>
+        <div class="work__content tab__content" id="tab_2">
+          <div class="work__left">
+            <div class="work__inner">
+              <h3 class="work__left-title">Составляем смету</h3>
+              <p class="work__left-text">
+                Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации
+                современных стандартов, некоторые особенности внутренней политики будут объективно
+                рассмотрены соответствующими инстанциями. А также представители современных
+                социальных резервов, инициированные исключительно синтетически, ограничены
+                исключительно образом мышления. Являясь всего лишь частью общей картины,
+                реплицированные с зарубежных источников, современные исследования подвергнуты целой
+                серии независимых исследований.
+              </p>
+            </div>
+            <div class="work__left-btns">
+              <button class="work__left-btn site-btn">Подробнее</button>
+              <button class="work__left-btn work__left-btn--border btn-reset">Договор</button>
+            </div>
+          </div>
+          <div class="work__right">
+            <picture>
+              <source media="(min-width:1440px)" srcset="assets/img/work/work2.jpg" />
+              <source media="(max-width:500px)" srcset="assets/img/work/work2-320.jpg" />
+              <source media="(max-width:768px)" srcset="assets/img/work/work2-768.jpg" />
+              <source media="(max-width:1440px)" srcset="assets/img/work/work2-1024.jpg" />
+              <img
+                class="work__right-img"
+                data-src="assets/img/work/work2.jpg"
+                src="#"
+                alt="работа"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="work__content tab__content" id="tab_3">
+          <div class="work__left">
+            <div class="work__inner">
+              <h3 class="work__left-title">Привлекаем подрядчиков</h3>
+              <p class="work__left-text">
+                Идейные соображения высшего порядка, а также новая модель организационной
+                деятельности требует анализа прогресса профессионального сообщества. Высокий уровень
+                вовлечения представителей целевой аудитории является чётким доказательством простого
+                факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших
+                направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель
+                организационной деятельности говорит о возможностях системы массового участия.
+                Принимая во внимание показатели успешности, постоянное
+                информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить
+                важные задания по разработке прогресса профессионального сообщества.
+              </p>
+            </div>
+            <div class="work__left-btns">
+              <button class="work__left-btn site-btn">Подробнее</button>
+              <button class="work__left-btn work__left-btn--border btn-reset">Договор</button>
+            </div>
+          </div>
+          <div class="work__right">
+            <picture>
+              <source media="(min-width:1440px)" srcset="assets/img/work/work3.jpg" />
+              <source media="(max-width:500px)" srcset="assets/img/work/work3-320.jpg" />
+              <source media="(max-width:768px)" srcset="assets/img/work/work3-768.jpg" />
+              <source media="(max-width:1440px)" srcset="assets/img/work/work3-1024.jpg" />
+              <img
+                class="work__right-img"
+                data-src="assets/img/work/work3.jpg"
+                src="#"
+                alt="работа"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="work__content tab__content" id="tab_4">
+          <div class="work__left">
+            <div class="work__inner">
+              <h3 class="work__left-title">Инспектируем все этапы работ</h3>
+              <p class="work__left-text">
+                Высокий уровень вовлечения представителей целевой аудитории является чётким
+                доказательством простого факта: высококачественный прототип будущего проекта
+                напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт
+                говорит нам, что новая модель организационной деятельности говорит о возможностях
+                системы массового участия. Принимая во внимание показатели успешности, постоянное
+                информационно-пропагандистское обеспечение нашей деятельности позволяет.
+              </p>
+            </div>
+            <div class="work__left-btns">
+              <button class="work__left-btn site-btn">Подробнее</button>
+              <button class="work__left-btn work__left-btn--border btn-reset">Договор</button>
+            </div>
+          </div>
+          <div class="work__right">
+            <picture>
+              <source media="(min-width:1440px)" srcset="assets/img/work/work4.jpg" />
+              <source media="(max-width:500px)" srcset="assets/img/work/work4-320.jpg" />
+              <source media="(max-width:768px)" srcset="assets/img/work/work4-768.jpg" />
+              <source media="(max-width:1440px)" srcset="assets/img/work/work4-1024.jpg" />
+              <img
+                class="work__right-img"
+                data-src="assets/img/work/work4.jpg"
+                src="#"
+                alt="работа"
+              />
+            </picture>
+          </div>
+        </div>
       </section>
       <section class="questions">
         <h2 class="questions__title site-title">Часто задаваемые вопросы</h2>
         <ul class="questions__list list-reset">
-          <li class="question">
+          <li class="question" data-quest="#question_1">
             <h3 class="question__title">
               <button class="heading btn-reset">
                 <span class="heading__text"> Из чего формируется конечная стоимость проекта? </span>
                 <span class="heading__icon"></span>
               </button>
             </h3>
+            <div class="question__content">
+              <p class="question__text">
+                Но высококачественный прототип будущего проекта является качественно новой ступенью
+                первоочередных требований. А ещё некоторые особенности внутренней политики, которые
+                представляют собой яркий пример континентально-европейского типа политической
+                культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
+                И нет сомнений, что явные признаки победы институционализации призывают нас к новым
+                свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль
+                ключевых факторов.
+              </p>
+              <p class="question__text">
+                Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут
+                быть призваны к ответу. Явные признаки победы институционализации набирают
+                популярность среди определённых слоёв населения, а значит, должны быть объединены
+                в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие
+                известные личности призывают нас к новым свершениям, которые, в свою очередь, должны
+                быть представлены в исключительно положительном свете.
+              </p>
+            </div>
           </li>
-          <li class="question">
+          <li class="question" data-quest="#question_2">
             <h3 class="question__title">
               <button class="heading btn-reset">
-                <span class="heading__text1">
+                <span class="heading__text">
                   У меня есть свой проект. Сможем ли мы его доработать / реализовать?
                 </span>
                 <span class="heading__icon"></span>
               </button>
             </h3>
+            <div class="question__content">
+              <p class="question__text">
+                Но высококачественный прототип будущего проекта является качественно новой ступенью
+                первоочередных требований. А ещё некоторые особенности внутренней политики, которые
+                представляют собой яркий пример континентально-европейского типа политической
+                культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
+                И нет сомнений, что явные признаки победы институционализации призывают нас к новым
+                свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль
+                ключевых факторов.
+              </p>
+              <p class="question__text">
+                Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут
+                быть призваны к ответу. Явные признаки победы институционализации набирают
+                популярность среди определённых слоёв населения, а значит, должны быть объединены
+                в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие
+                известные личности призывают нас к новым свершениям, которые, в свою очередь, должны
+                быть представлены в исключительно положительном свете.
+              </p>
+            </div>
           </li>
-          <li class="question">
+          <!-- <details></details> -->
+          <li class="question" data-quest="#question_3">
             <h3 class="question__title">
               <button class="heading btn-reset">
                 <span class="heading__text">
@@ -236,8 +417,27 @@
                 <span class="heading__icon"></span>
               </button>
             </h3>
+            <div class="question__content">
+              <p class="question__text">
+                Но высококачественный прототип будущего проекта является качественно новой ступенью
+                первоочередных требований. А ещё некоторые особенности внутренней политики, которые
+                представляют собой яркий пример континентально-европейского типа политической
+                культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
+                И нет сомнений, что явные признаки победы институционализации призывают нас к новым
+                свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль
+                ключевых факторов.
+              </p>
+              <p class="question__text">
+                Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут
+                быть призваны к ответу. Явные признаки победы институционализации набирают
+                популярность среди определённых слоёв населения, а значит, должны быть объединены
+                в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие
+                известные личности призывают нас к новым свершениям, которые, в свою очередь, должны
+                быть представлены в исключительно положительном свете.
+              </p>
+            </div>
           </li>
-          <li class="question">
+          <li class="question" data-quest="#question_4">
             <h3 class="question__title">
               <button class="heading btn-reset">
                 <span class="heading__text">
@@ -246,8 +446,27 @@
                 <span class="heading__icon"></span>
               </button>
             </h3>
+            <div class="question__content">
+              <p class="question__text">
+                Но высококачественный прототип будущего проекта является качественно новой ступенью
+                первоочередных требований. А ещё некоторые особенности внутренней политики, которые
+                представляют собой яркий пример континентально-европейского типа политической
+                культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
+                И нет сомнений, что явные признаки победы институционализации призывают нас к новым
+                свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль
+                ключевых факторов.
+              </p>
+              <p class="question__text">
+                Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут
+                быть призваны к ответу. Явные признаки победы институционализации набирают
+                популярность среди определённых слоёв населения, а значит, должны быть объединены
+                в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие
+                известные личности призывают нас к новым свершениям, которые, в свою очередь, должны
+                быть представлены в исключительно положительном свете.
+              </p>
+            </div>
           </li>
-          <li class="question">
+          <li class="question" data-quest="#question_5">
             <h3 class="question__title">
               <button class="heading btn-reset">
                 <span class="heading__text">
@@ -256,6 +475,25 @@
                 <span class="heading__icon"></span>
               </button>
             </h3>
+            <div class="question__content">
+              <p class="question__text">
+                Но высококачественный прототип будущего проекта является качественно новой ступенью
+                первоочередных требований. А ещё некоторые особенности внутренней политики, которые
+                представляют собой яркий пример континентально-европейского типа политической
+                культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
+                И нет сомнений, что явные признаки победы институционализации призывают нас к новым
+                свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль
+                ключевых факторов.
+              </p>
+              <p class="question__text">
+                Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут
+                быть призваны к ответу. Явные признаки победы институционализации набирают
+                популярность среди определённых слоёв населения, а значит, должны быть объединены
+                в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие
+                известные личности призывают нас к новым свершениям, которые, в свою очередь, должны
+                быть представлены в исключительно положительном свете.
+              </p>
+            </div>
           </li>
         </ul>
       </section>
